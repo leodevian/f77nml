@@ -28,6 +28,7 @@ class TokenType(enum.Enum):
     LOGICAL = enum.auto()
     NUMBER = enum.auto()
     STRING = enum.auto()
+    NEWLINE = enum.auto()
     SPACE = enum.auto()
     COMMENT = enum.auto()
     UNKNOWN = enum.auto()
@@ -46,7 +47,8 @@ PATTERNS = (
     (TokenType.LOGICAL, r"\.(TRUE|FALSE)\."),
     (TokenType.NUMBER, r"[+-]?\d+(\.\d*)?(E?[+-]?\d+)?"),
     (TokenType.STRING, r"('([^']|'')*'|\"[^\"]*\")"),
-    (TokenType.SPACE, r"[ \t\r\n]+"),
+    (TokenType.NEWLINE, r"[\r\n]+"),
+    (TokenType.SPACE, r"[ \t]+"),
     (TokenType.COMMENT, r"![^\n]*"),
     (TokenType.UNKNOWN, r"."),
 )
