@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
+import enum
 import re
-from enum import Enum
 from typing import TYPE_CHECKING, NamedTuple
 
 if TYPE_CHECKING:
@@ -12,25 +12,25 @@ if TYPE_CHECKING:
     from _typeshed import SupportsReadline
 
 
-class TokenType(Enum):
+class TokenType(enum.Enum):
     """The enumeration of token types."""
 
-    EOF = 0
-    GROUP = 1
-    END = 2
-    VARIABLE = 3
-    COMMA = 4
-    COLON = 5
-    LPAREN = 6
-    RPAREN = 7
-    EQUALITY = 8
-    REPEAT = 9
-    LOGICAL = 10
-    NUMBER = 11
-    STRING = 12
-    SPACE = 13
-    COMMENT = 14
-    UNKNOWN = 15
+    EOF = enum.auto()
+    GROUP = enum.auto()
+    END = enum.auto()
+    VARIABLE = enum.auto()
+    COMMA = enum.auto()
+    COLON = enum.auto()
+    LPAREN = enum.auto()
+    RPAREN = enum.auto()
+    EQUALITY = enum.auto()
+    REPEAT = enum.auto()
+    LOGICAL = enum.auto()
+    NUMBER = enum.auto()
+    STRING = enum.auto()
+    SPACE = enum.auto()
+    COMMENT = enum.auto()
+    UNKNOWN = enum.auto()
 
 
 PATTERNS = (
