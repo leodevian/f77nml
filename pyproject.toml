@@ -33,7 +33,9 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Typing :: Typed",
 ]
-dependencies = [  ]
+dependencies = [
+  "typing-extensions>=4.14.1; python_full_version<'3.12'",
+]
 urls.Changelog = "https://github.com/leodevian/f77nml/blob/main/CHANGELOG.md"
 urls.Homepage = "https://github.com/leodevian/f77nml"
 urls.Issues = "https://github.com/leodevian/f77nml/issues"

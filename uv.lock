@@ -355,6 +355,9 @@ wheels = [
 name = "f77nml"
 version = "0.1.0"
 source = { editable = "." }
+dependencies = [
+    { name = "typing-extensions", marker = "python_full_version < '3.12'" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -386,6 +389,7 @@ type = [
 ]
 
 [package.metadata]
+requires-dist = [{ name = "typing-extensions", marker = "python_full_version < '3.12'", specifier = ">=4.14.1" }]
 
 [package.metadata.requires-dev]
 dev = [
