@@ -96,10 +96,6 @@ def tokenize(
             if token_type is TokenType.COMMENT:
                 continue
 
-            # Ignore space characters.
-            if token_type is TokenType.SPACE:
-                continue
-
             yield Token(type=token_type, string=string)
 
     yield Token(type=TokenType.EOF, string="")
