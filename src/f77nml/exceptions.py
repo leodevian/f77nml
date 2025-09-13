@@ -24,3 +24,21 @@ class UnknownTokenError(Exception):
     def __str__(self) -> str:
         """Return the error message."""
         return self.message
+
+
+class UnexpectedTokenError(Exception):
+    """An exception that formats an error message for unexpected tokens."""
+
+    def __init__(self, token: Token) -> None:
+        """Initialize the exception.
+
+        Args:
+            token: The unexpected token.
+        """
+        super().__init__(token)
+        self.message = f"unexpected token: {token.string!r}"
+        self.token = token
+
+    def __str__(self) -> str:
+        """Return the error message."""
+        return self.message

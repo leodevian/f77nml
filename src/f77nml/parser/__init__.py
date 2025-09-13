@@ -27,6 +27,15 @@ class ParserContext:
     data: OrderedDict[str, OrderedDict[str, Any]] = field(default_factory=OrderedDict)
     """The data."""
 
+    @property
+    def current_group(self) -> OrderedDict[str, Any]:
+        """Return the current group.
+
+        Returns:
+            The current group.
+        """
+        return next(reversed(self.data.values()))
+
 
 # noinspection PyAttributeOutsideInit
 class Parser:
