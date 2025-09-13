@@ -47,6 +47,7 @@ class SearchGroup(ParserState):
 
         group_name = token.string.strip("$")
         context.data[group_name] = OrderedDict()
+        context.data.move_to_end(group_name, last=True)
         context.state = SearchVariable()
 
 
