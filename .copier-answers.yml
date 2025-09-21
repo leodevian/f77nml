@@ -1,0 +1,17 @@
+# Changes here will be overwritten by Copier. Do not edit manually.
+_commit: v4.6.0
+_src_path: gh:leodevian/modern-python
+backend: hatch
+entry_points: []
+features:
+- tasks
+github_user: leodevian
+hatch_plugins:
+- hatch-vcs
+install: uv sync
+license: MIT
+project_description: A Python package for FORTRAN 77 NAMELIST I/O
+project_name: f77nml
+tasks: nox
+user_email: leodevian.gh@gmail.com
+user_name: Léo Bernard
